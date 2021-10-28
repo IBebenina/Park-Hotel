@@ -1,0 +1,55 @@
+.menu {
+    &__item {
+        font-weight: bold;
+        font-size: 2rem;
+        text-transform: uppercase;
+        &:not(:last-of-type)::after {
+            content: "";
+            display: inline-block;
+            background-color: #fff;
+            width: 30px;
+            height: 2px;
+            margin: 5px 45px;
+        }
+    }
+    a {
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .menu {
+        &__item {
+            font-size: 1.8rem;
+            &:not(:last-of-type)::after {
+                width: 25px;
+                margin: 5px 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        &__item {
+            font-size: 1.5rem;
+            &:not(:last-of-type)::after {
+                width: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 522px) {
+    .menu {
+        &__item {
+            display: block;
+            &:not(:last-of-type)::after {
+                content: none;
+            }
+            &:not(:last-of-type) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

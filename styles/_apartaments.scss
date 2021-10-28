@@ -1,0 +1,138 @@
+.apartaments {
+    padding: 100px 0;
+    &__text {
+        @include main-text-style;
+        margin: 30px auto 55px;
+        max-width: 617px;
+    }
+    &__item-block {
+        display: flex;
+        max-width: 1176px;
+        margin: 0 auto;
+    }
+    &__item {
+        max-width: 698px;
+        width: calc((100% - 2*48px)/3);
+        text-align: left;
+        position: relative;
+        img {
+            width: 100%;
+        }
+        &:not(:last-of-type) {
+            margin-right: 48px;
+        }
+        &:first-of-type::after {
+            @include pseudo("от 7 т.р./сутки");
+        }
+        &:nth-of-type(2)::after {
+            @include pseudo("от 23 т.р./сутки");
+        }
+        &:nth-of-type(2)::before {
+            content: "VIP";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            background-color: #F24040;
+            border-radius: 50%;
+            text-align: center;
+            color: #fff;
+            font-family: 'Source Serif Pro', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            top: -25px;
+            left: -25px;
+        }
+        &:last-of-type::after {
+            @include pseudo("от 13 т.р./сутки");
+        }
+        &-heading {
+            font-size: 3rem;
+            font-weight: normal;
+            margin: 25px 0 15px;
+        }
+        &-text {
+            font-size: 1.8rem;
+            font-weight: lighter;
+        }
+    }
+}
+
+@media screen and (max-width: 1340px) {
+    .apartaments {
+        padding: 100px 30px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .apartaments {
+        padding: 80px 0;
+        &__text {
+            @include main-text-style1024;
+            margin: 30px auto;
+        }
+        &__item-block {
+            flex-direction: column;
+            max-width: 698px;
+        }
+        &__item {
+            width: 100%;
+            &:not(:last-of-type) {
+                margin-right: 0;
+                margin-bottom: 75px;
+            }
+            &:first-of-type::after {
+                @include pseudo1024("от 7 т.р./сутки");
+            }
+            &:nth-of-type(2)::after {
+                @include pseudo1024("от 23 т.р./сутки");
+            }
+            &:nth-of-type(2)::before {
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                font-size: 1.6rem;
+                top: -30px;
+                left: -30px;
+            }
+            &:last-of-type::after {
+                @include pseudo1024("от 13 т.р./сутки");
+            }
+            &-heading {
+                margin: 15px 0;
+            }
+            &-text {
+                font-size: 2.3rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .apartaments {
+        padding: 70px 0;
+        &__text {
+            margin: 25px auto 30px;
+        }
+        &__item-block {
+            max-width: 592px;
+        }
+        &__item {
+            &:not(:last-of-type) {
+                margin-bottom: 80px;
+            }
+            &-heading {
+                margin: 20px 0;
+            }
+            &-text {
+                font-size: 2.2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 653px) {
+    .apartaments {
+        padding: 70px 30px;
+    }
+}

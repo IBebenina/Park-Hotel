@@ -1,0 +1,61 @@
+.general-block {
+    background-image: url(../img/park_hotel.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 450px 0 25px;
+    color: #fff;
+    &__heading {
+        font-size: 6rem;
+    }
+    &__text {
+        font-size: 2.5rem;
+        margin: 30px auto 60px;
+        max-width: 495px;
+    }
+    .button {
+        margin-bottom: 85px;
+    }
+    &__arrow {
+        display: block;
+        background-image: url(../icons/pointer.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 57px;
+        height: 22px;
+        margin: 0 auto;
+        transition: all .5s;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .general-block {
+        padding: 353px 0 25px;
+        &__heading {
+            font-size: 4.5rem;
+        }
+        &__text {
+            font-size: 1.8rem;
+            margin: 20px auto 45px;
+            max-width: 356px;
+        }
+        .button {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .general-block {
+        padding: 249px 0 25px;
+        &__text {
+            margin: 20px auto 35px;
+        }
+        .button {
+            margin-bottom: 27px;
+        }
+    }
+}

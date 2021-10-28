@@ -1,0 +1,31 @@
+.button {
+    &--small {
+        @include button-style(312px);
+    }
+    &--large {
+        @include button-style(404px);
+    }
+    &:hover {
+        transform: scale(1.1);
+        background-color: #205350;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .button {
+        &--small {
+            @include button-style1024(248px);
+        }
+        &--large {
+            @include button-style1024(324px);
+        }
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .button {
+        &--large {
+            @include button-style1024(270px);
+        }
+    }
+}

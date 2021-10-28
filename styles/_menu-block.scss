@@ -1,0 +1,16 @@
+.menu-block {
+    background-color: rgba(32, 83, 80, 0.5);
+    padding: 30px 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .menu-block {
+        padding: 25px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-block {
+        padding: 19px 0;
+    }
+}
